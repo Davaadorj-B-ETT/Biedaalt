@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <script src="https://kit.fontawesome.com/e85ddf2d00.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>NewsGrid | Шинэ мэдээ</title>
+</head>
+
+<body>
+    <nav id="main-nav">
+        <div class="container">
+            <img src="img/logo.png" alt="Newsgrid" class="logo">
+            <p>Өнөөдөр: <span id="today"></span></p>
+            <div class="social">
+                <a href="http://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="http://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="http://youtube.com" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+            </div>
+            <ul>
+                <li><a class="current" href="index.html">Нүүр</a></li>
+                <li><a href="about.html">Тухай</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Showcase -->
+
+    <header id="showcase">
+        <div class="container">
+            <div class="showcase-container">
+                <div class="showcase-content">
+                    <div class="category category-sports">Спорт</div>
+                    <h1>Спортын мэдээ</h1>
+                    <p>Монголын Жюү жицүгийн холбоо 7 дахь жилдээ "AJP TOUR ULAANBAATAR INTERNATIONAL 2025" тэмцээнийг эх нутгийн дэвжээнээ хүлээн авч байна.Энэ жилийн тэмцээнд Монгол, Австри, БНХАУ, ОХУ, БНСУ-ын 43 клубийн 805 тамирчин өрсөлдөж байна.</p>
+                    <a href="article.html" class="btn btn-primary">Дэлгэрэнгүй</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Нүүр хуудасны мэдээний Grid -->
+
+    <section id="home-articles" class="py-2">
+        <div class="container">
+            <h2>Онцлох мэдээнүүд</h2>
+            <div class="article-container">
+                <article class="card">
+                    <img src="img/showcase.jpg" alt="">
+                    <div>
+                        <div class="category category-sports">Спорт</div>
+                        <h3>
+                            <a href="article.html">ЖЮҮ ЖИЦҮГИЙН ОЛОН УЛСЫН ТЭМЦЭЭН</a>
+                        </h3>
+                        <p>Монголын Жюү жицүгийн холбоо 7 дахь жилдээ "AJP TOUR ULAANBAATAR INTERNATIONAL 2025"</p>
+                    </div>
+                </article>
+
+                <article class="card bg-dark">
+                    <div class="category category-art">Соёл урлаг</div>
+                    <h3>
+                        <a href="art.html" style="color: grey;">Хувь заяа олон улсын кино наадамд ӨРСӨЛДӨНӨ</a>
+                    </h3>
+                    <p>"Хувьсал" продакшны дэлгэцийн 8 дахь уран бүтээл "Хувь заяа" уран сайхны кино 24 дэх удаагийн Сан диего олон улсын кино наадамд албан ёсоор сонгогджээ.</p>
+                </article>
+
+                <article class="card">
+                    <img src="img/articles/tech1.jpg" alt="">
+                    <div class="category category-tech">Технологи</div>
+                    <h3>
+                        <a href="technology.html">ChatGPT-д эцэг, эхийн хяналтын функц нэмэгджээ.</a>
+                    </h3>
+                    <p>АНУ-ын OpenAI компани өөрийн боловсруулсан ChatGPT хиймэл оюун ухааны загвартаа эцэг, эхийн хяналтын функцийг нэмж байна.</p>
+                </article>
+
+                <article class="card">
+                    <div class="category category-art">Загвар</div>
+                    <h3>
+                        <a href="fashion.html">21 дэх удаагийн "ТЭРГҮҮН МИСС"</a>
+                    </h3>
+                    <p>“Miss Mongolia 2025" наадмын Үндэсний ялагч, титэм гардуулах ёслол долоодугаар сарын 4-нд сүүлийн шалгаруулалтаа зохион байгуулж, Тэргүүн миссээр Ц.Баярчимэг тодорлоо. </p>
+                    <img src="img/fashion.jpg" style="height: 300px;" alt="">
+                </article>
+
+                <article class="card">
+                    <img src="img/legal.png" alt="">
+                    <div class="category category-tech">Улс төр</div>
+                    <h3>
+                        <a href="political.html">УИХ-ын дарга Д.Амарбаясгалан 102 гишүүний саналаар ОГЦОРЛОО</a>
+                    </h3>
+                    <p>УИХ-ын чуулганы нэгдсэн хуралдаан (2025.10.17) үргэлжилж байна. Өнөөдрийн хуралдаанаар УИХ-ын дарга Д.Амарбаясгалангийн огцрох хүсэлтийн талаар хэлэлцлээ.</p>
+                </article>
+            </div>
+        </div>
+
+        <script>
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = (today.getMonth() + 1).toString().padStart(2, '0');
+            const day = today.getDate().toString().padStart(2, '0');
+            document.getElementById("today").textContent = `${year}-${month}-${day}`;
+        </script>
+    </section>
+
+    <!-- Footer -->
+
+    <div id="main-footer" class="py-2">
+        <div class="container footer-container">
+            <div>
+                <img src="img/logo_light.png" alt="NewsGrid">
+                <p>Манай Веп хуудас нь сургалтын хүрээнд хийгдсэн цаг үеийн мэдээ мэдээллийг хэрэглэгчдэд түргэн шуурхай хүргэх зорилготой.</p>
+            </div>
+            <div>
+                <h3>И-мэйл бүртгүүлэх</h3>
+                <p>Та майл хаягаар цаг тухай бүрт мэдээлэл авахыг хүсвэл дараах холбоосоор бүртгүүлнэ үү. </p>
+                <form>
+                    <input type="email" placeholder="И-майлээ бичнэ үү">
+                    <input type="password" placeholder="Нууц үгээ оруулна уу.">
+                    <input type="submit" value="Бүртгүүлэх" class="btn btn-primary">
+                </form>
+            </div>
+            <div>
+                <h3>Сайтын холбоос</h3>
+                <ul class="list">
+                    <li><a href="join.html">Сурталчилгаа байршуулах</a></li>
+                    <li><a href="about.html">Бидний тухай</a></li>
+                    <li><a href="contact.html">Холбоо барих</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Бидэнтэй нэгдэх</h3>
+                <p>Та өөрийн нийлэлтийг биднээр дамжуулан олон нийтэд хүргэх боломжтой.</p>
+                <a href="join.html" class="btn btn-secondary">Нэгдэх</a>
+            </div>
+            <div>
+                <p>
+                    Copyright &copy 2025, All right reserved;
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

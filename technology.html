@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <script src="https://kit.fontawesome.com/e85ddf2d00.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>NewsGrid | Шинэ мэдээлэл</title>
+</head>
+
+<body>
+    <nav id="main-nav">
+        <div class="container">
+            <img src="img/logo.png" alt="Newsgrid" class="logo">
+            <p>Өнөөдөр: <span id="today"></span></p>
+            <div class="social">
+                <a href="http://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="http://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="http://youtube.com" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+            </div>
+            <ul>
+                <li><a class="current" href="index.html">Нүүр</a></li>
+                <li><a href="about.html">Тухай</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="article">
+        <div class="container">
+            <div class="page-container">
+                <article class="card">
+                    <img src="img/technology.jpg" alt="">
+                    <h1 class="l-heading">ChatGPT-д эцэг, эхийн хяналтын функц нэмэгджээ</h1>
+                    <div class="meta">
+                        <small>
+                        <i class="fas fa-user"></i>
+                         Нийтлэлийг Я.Болор 2025-10-01
+                    </small>
+                        <div class="category category-tech">
+                            Технологи
+                        </div>
+                    </div>
+                    <p>АНУ-ын OpenAI компани өөрийн боловсруулсан ChatGPT хиймэл оюун ухааны загвартаа эцэг, эхийн хяналтын функцийг нэмж байна.
+                    </p>
+                    <p>Эл функцээс гадна эцэг, эхчүүдэд зориулсан мэдээллийн шинэ хуудсыг нээж байгаа бөгөөд ингэснээр тэд ChatGPT чатботын үйл ажиллагаанд хүүхдүүдийнхээ насанд тохирсон тохиргоо хийх боломжтой болох юм. OpenAI компани хүүхдүүдийг зохисгүй
+                        контент, вирус бүхий челленж, насанд хүрэгчдэд зориулсан болон харгис хэрцгий тоглоомоо хамгаалах зорилгоор ийм функцийг нэвтрүүлж байна. </p>
+
+                </article>
+                <aside id="categories" class="card">
+                    <h2>Мэдээний төрөл</h2>
+                    <ul class="list">
+                        <li><a href="article.html"><i class="fas fa-chevron-right"></i> Спорт</a></li>
+                        <li><a href="art.html"><i class="fas fa-chevron-right"></i> Соёл урлаг</a></li>
+                        <li><a href="technology.html"><i class="fas fa-chevron-right"></i> Технологи</a></li>
+                        <li><a href="fashion.html"><i class="fas fa-chevron-right"></i> Загвар</a></li>
+                        <li><a href="political.html"><i class="fas fa-chevron-right"></i> Улс төр</a></li>
+                    </ul>
+                </aside>
+
+                <aside class="card bg-secondary">
+                    <h2>Манай клубт нэгдэх</h2>
+                    <p>Та өөрийн нийлэлтийг биднээр дамжуулан олон нийтэд хүргэх боломжтой.</p>
+                    <a href="join.html" class="btn btn-dark btn-block">Нэгдэх</a>
+                </aside>
+            </div>
+        </div>
+
+        <script>
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = (today.getMonth() + 1).toString().padStart(2, '0');
+            const day = today.getDate().toString().padStart(2, '0');
+            document.getElementById("today").textContent = `${year}-${month}-${day}`;
+        </script>
+    </section>
+
+
+    <!-- Footer -->
+
+    <div id="main-footer" class="py-2">
+        <div class="container footer-container">
+            <div>
+                <img src="img/logo_light.png" alt="NewsGrid">
+                <p>Манай Веп хуудас нь сургалтын хүрээнд хийгдсэн цаг үеийн мэдээ мэдээллийг хэрэглэгчдэд түргэн шуурхай хүргэх зорилготой.</p>
+            </div>
+            <div>
+                <h3>И-мэйл бүртгүүлэх</h3>
+                <p>Та майл хаягаар цаг тухай бүрт мэдээлэл авахыг хүсвэл дараах холбоосоор бүртгүүлнэ үү. </p>
+                <form>
+                    <input type="email" placeholder="И-майлээ бичнэ үү">
+                    <input type="password" placeholder="Нууц үгээ оруулна уу.">
+                    <input type="submit" value="Бүртгүүлэх" class="btn btn-primary">
+                </form>
+            </div>
+            <div>
+                <h3>Сайтын холбоос</h3>
+                <ul class="list">
+
+                    <li><a href="join.html">Сурталчилгаа байршуулах</a></li>
+                    <li><a href="about.html">Бидний тухай</a></li>
+                    <li><a href="contact.html">Холбоо барих</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Бидэнтэй нэгдэх</h3>
+                <p>Та өөрийн нийлэлтийг биднээр дамжуулан олон нийтэд хүргэх боломжтой.</p>
+                <a href="join.html" class="btn btn-secondary">Нэгдэх</a>
+            </div>
+            <div>
+                <p>
+                    Copyright &copy 2025, All right reserved;
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
